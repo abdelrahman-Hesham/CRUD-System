@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">    
+<link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container  my-bord my-3 d-flex justify-content-center p-5">
+        <div class="main-title  text-center  ">
+            <h1 class="my-psuedo position-relative display-5">Bookmarker</h1>
+        </div>
+        </div>
+    <div class="container justify-content-center d-flex mypara">
+        <p class=""><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></p>
+    </div>
+
+    <div class="container">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label "><i class="fa-solid fa-book-bookmark m-2"></i> <strong> Site Name </strong> </label>
+            <input oninput="allvalidation(this,'msgName')" type="text" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+            <p id="msgName" class="alert alert-danger my-3 p-2 d-none"> Website URL is not valid</p>  
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><i class="fa-solid fa-link m-2"></i> <strong> Site URL </strong> </label>
+            <input oninput="allvalidation(this,'msgURL')" class="form-control" id="websiteURL" placeholder="Website URL">
+            <p id="msgURL" class="alert alert-danger my-3 p-2 d-none"> Website URL is not valid</p>
+          </div>
+    </div>
+<div class="container d-flex justify-content-center my-bord p-3">
+    <button class="btn btn-danger px-5 my-a" onclick="addURL()">submit</button>
+</div>
+<div class="container my-3">
+<div
+    class="table-responsive"
+>
+    <table
+        class="table table-light"
+    >
+        <thead>
+            <tr>
+                <th scope="col">Index</th>
+                <th scope="col">WebSite name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tBody">
+            
+            
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

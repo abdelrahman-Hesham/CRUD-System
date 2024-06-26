@@ -1,0 +1,62 @@
+:root{
+
+    --main-title:"Pacifico", cursive;
+    --font-for-b:"Righteous", sans-serif;
+    --a-f-family:"PT Sans Caption", sans-serif;
+    
+}
+body{
+    background-color: #F7ECDE;
+}
+
+h1{
+    font-family: var(--main-title);
+    font-weight: 400;
+}  
+
+
+.my-psuedo
+{
+    position: relative;
+}
+
+.my-psuedo::after{
+    content: "";
+    width: 100%;
+    background-color:#FEC260;
+    height: 15px;
+    position: absolute;
+    transform: translateX(-100%);
+    bottom: 0;
+    transition: all 1s;
+    z-index: -1;
+
+}
+
+ .my-psuedo:hover::after{
+    content: "";
+    width: 100%;
+    background-color:#FEC260;
+    height: 30px;
+    position: absolute;
+    transform: translateX(-100%);
+    z-index: -1;
+    
+}
+
+
+.my-bord{
+    border-bottom: 2px dotted black;
+}
+
+.mypara p {
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3FA55C, #B2AC4A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:var(--font-for-b)
+  }
+
+  .my-a{
+    font-family: var(--a-f-family);
+  }
